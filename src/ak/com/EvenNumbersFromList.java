@@ -17,6 +17,10 @@ public class EvenNumbersFromList {
         for (Integer evenNumber : evenNumbers) {
             System.out.println(evenNumber);
         }
+        System.out.println("Even Numbers from given list");
+        list.stream()
+                .filter(n -> n%2 == 0)
+                .forEach(System.out::println);
 
         //other way
         Map<Boolean, List<Integer>> mapList = Arrays.stream(arr).boxed()
