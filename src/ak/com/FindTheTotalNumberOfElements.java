@@ -1,6 +1,7 @@
 package ak.com;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 public class FindTheTotalNumberOfElements {
@@ -18,6 +19,12 @@ public class FindTheTotalNumberOfElements {
         //Max No
         int maxNo = myList.stream().max(Integer::compare).get();
         System.out.println("MAX No:"+maxNo);
+
+        /* When numbers are given as Array int[] arr = {10,15,8,49,25,98,98,32,15}; */
+        int maxdata = Arrays.stream(arr).boxed()
+                .max(Comparator.naturalOrder()).get();
+
+        System.out.println(maxdata);
 
         //Min No
         int minNo = myList.stream().min(Integer::compare).get();
